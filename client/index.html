@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Backend Assessment</title>
+</head>
+<body class="container">
+  <button id="complimentButton">Get a compliment</button>
+  <button id="fortune-cookie">Get your fortune</button>
+  <div id="new-fortune"></div>
+  <button id="get-posters"> Get Posters</button>
+  <section id="posters">
+    <ul id="poster-list"></ul>
+  </section>
+  <section>
+    <form class="add-poster">
+      <input type="text" class="title" placeholder="Poster Title" required>
+      <input type="text" class ="img" placeholder="Image URL">
+      <input type="submit">
+    </form>
+  </section>
+    
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

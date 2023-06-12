@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#posters{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    text-align: center;
+    flex-flow: row flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+ul li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li span{
+    font-weight: 900;
+    font-size: large;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
+
+.delete{
+    color: red;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+}
+
+.delete:hover{
+    background-color: gray;
+    cursor: pointer;
+}
