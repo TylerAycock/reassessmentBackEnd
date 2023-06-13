@@ -47,3 +47,26 @@ img{
     background-color: gray;
     cursor: pointer;
 }
+
+.add-poster{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#stay-motivated{
+    display: flex;
+    height: 50px;
+    width: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.counter{
+    border: 3px solid red;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 const fortunes = ["A good time to finish up old tasks.", "A new perspective will come with the new year.", "A truly rich life contains love and art in abundance.", "All will go well with your new project.", "An important person will offer you support." ]
 
 const posters = [
@@ -15,6 +17,7 @@ const posters = [
     }
 ]
 
+let counter = 0
 
 module.exports = {
 
@@ -46,6 +49,19 @@ module.exports = {
         let {id} = req.params
         posters.splice(id, 1)
         resp.status(200).send(posters)
+    },
+    moveCounter: (req,resp) =>{
+        console.log(req.params)
+        let {id}= req.params
+        console.log(id)
+        if (id === `minus`){
+            counter--
+        }
+        if(id === `plus`){
+            counter++
+        }
+        console.log(`the count is now ${counter}`)
+        resp.send(200).send(counter)
     }
 
 }

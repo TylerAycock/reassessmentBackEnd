@@ -5,6 +5,12 @@ const posterSection = document.getElementById(`posters`)
 const posterBtn = document.querySelector(`#get-posters`)
 const posterList = document.getElementById(`poster-list`)
 const form = document.querySelector(`.add-poster`)
+const minusBTN = document.getElementById(`minus`)
+const plusBTN = document.getElementById(`plus`)
+let counter = document.querySelector(`.counter`)
+
+
+
 const baseURL = "http://localhost:4000/api/poster/"
 
 
@@ -87,6 +93,22 @@ const showPosters = posterArr => {
     })
 }
 
+// WIP counter to showcase put 
+
+const moveCounter = evt => {
+    evt.preventDefault()
+    console.log(`The ${evt.target.id} button was clicked`)
+    axios.put(`http://localhost:4000/api/counter/${evt.target.id}`)
+    .then(res=>{
+       number = parseInt(res.data)
+        console.log(`this was sent back ${number}`)
+        // number = parseInt(res)
+        // console.log(number)
+        // counter.textContent = number
+    })
+    .catch(err =>console.log(err))
+}
+
 
 
 
@@ -94,3 +116,5 @@ complimentBtn.addEventListener('click', getCompliment)
 fortuneBtn.addEventListener(`click`, getFortune)
 posterBtn.addEventListener(`click`, getPosters)
 form.addEventListener(`submit`, addPoster)
+minusBTN.addEventListener(`click`, moveCounter)
+plusBTN.addEventListener(`click`, moveCounter)

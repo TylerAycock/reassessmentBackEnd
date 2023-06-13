@@ -12,7 +12,8 @@ const {
     getFortune,
     getPosters,
     addPosters,
-    deletePosters
+    deletePosters,
+    moveCounter
 } = require('./controller')
 
 app.get("/api/compliment", getCompliment);
@@ -20,5 +21,6 @@ app.get(`/api/fortune/`, getFortune)
 app.get(`/api/poster/`, getPosters)
 app.post(`/api/poster/`, addPosters)
 app.delete(`/api/poster/:id/`, deletePosters)
+app.put("/api/counter/:id", moveCounter)
 
 app.listen(4000, () => console.log("Server running on loclahost:4000 Captain"));
